@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manejo de Imágenes</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <style>
+    /* Estilos adicionales */
+    .image-container {
+      text-align: center;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="text-center mt-5">Manejo de Imágenes</h1>
+    <button id="ocultarBtn" class="btn btn-primary mt-3">Ocultar Imagen</button>
+    <button id="mostrarBtn" class="btn btn-primary mt-3">Mostrar Imagen</button>
+    <div class="image-container">
+      <img id="imagen" src="https://www.micachorro.net/wp-content/uploads/2018/02/Golden-Retriever-precio-y-cachorros.png" class="img-fluid" alt="Imagen">
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    // Función para ocultar la imagen
+    $("#ocultarBtn").click(function() {
+      $("#imagen").hide();
+      $("h1").text("¡No tenemos ninguna imagen!").addClass("text-danger");
+    });
+
+    // Función para mostrar la imagen
+    $("#mostrarBtn").click(function() {
+      $("#imagen").show();
+      $("h1").text("¡Mirá la siguiente imagen!").removeClass("text-danger");
+    });
+  </script>
+</body>
+</html>
